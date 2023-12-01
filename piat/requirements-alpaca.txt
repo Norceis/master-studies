@@ -1,0 +1,19 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+
+accelerate==0.22
+appdirs==1.4.4
+# bitsandbytes==0.37.2
+datasets==2.10.1
+fire==0.5.0
+git+https://github.com/huggingface/peft.git
+git+https://github.com/huggingface/transformers.git
+torch==2.0.0+cu118
+torchvision==0.15.1+cu118
+torchaudio==2.0.1
+sentencepiece==0.1.97
+tensorboardX==2.6
+gradio==3.23.0
+transformers
+jupyter
+seaborn
