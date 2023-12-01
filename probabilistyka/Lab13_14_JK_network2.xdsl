@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network2" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Sun">
+			<state id="Positive" />
+			<state id="Negative" />
+			<probabilities>0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Water">
+			<state id="Positive" />
+			<state id="Negative" />
+			<probabilities>0.9 0.1</probabilities>
+		</cpt>
+		<cpt id="Fertilizer">
+			<state id="Positive" />
+			<state id="Negative" />
+			<probabilities>0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="Pest">
+			<state id="Positive" />
+			<state id="Negative" />
+			<probabilities>0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Warmth">
+			<state id="Positive" />
+			<state id="Negative" />
+			<parents>Sun</parents>
+			<probabilities>0.75 0.25 0.25 0.75</probabilities>
+		</cpt>
+		<cpt id="Fungal_diseases">
+			<state id="Positive" />
+			<state id="Negative" />
+			<parents>Warmth</parents>
+			<probabilities>0.2 0.8 0.05 0.95</probabilities>
+		</cpt>
+		<cpt id="Plant_growth">
+			<state id="State0" />
+			<state id="State1" />
+			<parents>Pest Water Fertilizer Fungal_diseases Warmth Sun</parents>
+			<probabilities>0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.2304.0 ACADEMIC" name="Network2">
+			<node id="Sun">
+				<name>Sun</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>593 361 648 405</position>
+			</node>
+			<node id="Water">
+				<name>Water</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>120 311 166 339</position>
+			</node>
+			<node id="Fertilizer">
+				<name>Fertilizer</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>201 278 257 313</position>
+			</node>
+			<node id="Plant_growth">
+				<name>Plant growth</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>270 377 343 422</position>
+			</node>
+			<node id="Pest">
+				<name>Pest</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>60 389 101 414</position>
+			</node>
+			<node id="Fungal_diseases">
+				<name>Fungal diseases</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>327 266 443 324</position>
+			</node>
+			<node id="Warmth">
+				<name>Warmth</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>499 301 551 333</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only -->
+<smile version="1.0" id="Network3" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="Burglary">
+			<state id="Positive" />
+			<state id="Negative" />
+			<probabilities>0.01851851851851852 0.9814814814814815</probabilities>
+		</cpt>
+		<cpt id="Earthquake">
+			<state id="Positive" />
+			<state id="Negative" />
+			<probabilities>0.00821917808219178 0.9917808219178083</probabilities>
+		</cpt>
+		<cpt id="Burglary_alarm">
+			<state id="Positive" />
+			<state id="Negative" />
+			<parents>Burglary Earthquake</parents>
+			<probabilities>0.9690733590733591 0.03092664092664093 0.9358 0.06420000000000001 0.01596958174904943 0.9840304182509506 0.008624999999999999 0.991375</probabilities>
+		</cpt>
+		<cpt id="Phone_call">
+			<state id="Positive" />
+			<state id="Negative" />
+			<parents>Burglary_alarm</parents>
+			<probabilities>0.75 0.25 0 1</probabilities>
+		</cpt>
+		<cpt id="Radio_news">
+			<state id="Positive" />
+			<state id="Negative" />
+			<parents>Earthquake</parents>
+			<probabilities>0.99 0.01000000000000001 0.3 0.7</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 4.0.2304.0 ACADEMIC" name="Network3">
+			<node id="Burglary">
+				<name>Burglary</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>60 100 116 135</position>
+			</node>
+			<node id="Earthquake">
+				<name>Earthquake</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>220 100 288 142</position>
+			</node>
+			<node id="Burglary_alarm">
+				<name>Burglary alarm</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>120 160 202 211</position>
+			</node>
+			<node id="Phone_call">
+				<name>Phone call</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>123 240 202 293</position>
+			</node>
+			<node id="Radio_news">
+				<name>Radio news</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>280 160 351 204</position>
+			</node>
+			<textbox>
+				<caption>The parameters of the burglary alarm node changed significantly (positive went from 0.02 to 0.026).\n </caption>
+				<font color="000000" name="Arial" size="5" />
+				<position>198 218 345 246</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

@@ -1,0 +1,23 @@
+13. Sieć Bayesowska jest przydatna w przypadku gdy mamy do dyspozycji małą liczbę wydarzeń do połączenia małą liczbą związków przyczynowo-skutkowych (1A).
+W przypadku sieci 1B jedno wydarzenie jest skutkiem wielu różnych przyczyn, ale nie jest to sieć o dużej głębokości, przez co nawet bez użycia sieci bayesowskiej możnaby wnioskować z dużym prawdopodobieństwem sukcesu prawdopodobieństwo
+rozwijania się rośliny. Dodatkowo wydarzenia takie jak natężenie pleśni, wody, słońca, ciepła, szkodników nie powinny być opisywane jako dyskretne, tylko jako wartości ciągłe,
+np. ilość pleśni z zakresu 0-1, czy też ilość wody z zakresu 0-1, procentowo zależne od stanu faktycznego. Sieć 1C jest średniej głębokości, ale występuje tam mało zależności
+przyczynowo-skutkowych (dwa wydarzenia mają wpływ na wydarzenie pośrednie, a tylko to jedno wydarzenie pośrednie ma wpływ na wydarzenia końcowe), co sprawia, podobnie jak w 
+przypadku poprzednim, że możnaby bez użycia sieci bayesowskiej wnioskować z dużym prawdopodobieństwem sukcesu prawdopodobieństwo utraty lodowców i przybywania pustyń.
+
+14. A) Wyniki otrzymywane przez sieć są zgodne z przewidywaniami rozumowymi.
+    B) Najbardziej oddalone od siebie węzły to Age i Vaccination. Zgodnie ze ścieżkami:
+	
+	Age d-sep Vaccination | {}
+	Age -> Cardiovascular Disease -> Pneumonia <- COVID <- Vaccination - nieaktywna
+	Age -> Cardiovascular Disease -> Cough <- COVID <- Vaccination - nieaktywna
+
+	Są to wydarzenia nie d-separowalne. By były one d-separowalne powyższe ścieżki muszą być aktywne, co oznacza poznanie wyników wydarzeń Pneumonia i Cough.
+	
+	Age d-sep Vaccination | {Pneumonia, Cough}
+	Age -> Cardiovascular Disease -> Pneumonia <- COVID <- Vaccination - aktywna
+	Age -> Cardiovascular Disease -> Cough <- COVID <- Vaccination - aktywna
+
+	Jest to zgodne z przewidywaniem rozumowym, ponieważ objawy chorób CD i COVID, jakimi są Pneumonia i Cough mogą być zależne zarówno od wieku, jak i stanu zaszczepienia.
+	Jeśli wykluczymy jedno z tych dwóch wydarzeń (Age lub Vaccination) jako źródło objawów choroby, to jednocześnie poznamy stan faktyczny wydarzenia drugiego (Jeśli osoba
+	jest młoda, a ma zapalenie płuc, to prawdopodobnie nie była szczepiona i vice versa).
